@@ -5,9 +5,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class AppController {
+
 	
 	@GetMapping("")
 	public String viewHomePage() {
+		System.out.println();
 		return "index";
+	}
+	@GetMapping("login")
+	public String viewLoginPage() {
+		
+		return "login";
 	}
 }

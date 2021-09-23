@@ -10,5 +10,31 @@
 	width:40vw;
 	border-style:inset;
 }
-#notice{
+#notices{
+	float:right;
+	border-style:double;
+	border-color:blueviolet;
+	margin-top:10%;
+}
+body{
+	background-color:cadetblue;
+}
+
+#disclaimer{
+	color : yellow;
+}
+#loginInputId , #loginInputPassword, #loginSubmit{
+	border-radius:5px;
+}
+#loginSubmit{
+	position:relative;
+	left:30%;
+}
+#loginForm{
+	margin-left:35%;
+	margin-top:20%;
+	padding:20px;
+	width:fit-content;
+	border-style:solid;
+	border-radius:30px;
 }
