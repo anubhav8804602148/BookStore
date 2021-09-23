@@ -15,10 +15,10 @@ public class User {
 	private long id;
 
 	@Column(nullable=false)
-	private String fname;
+	private String firstName;
 	
 	@Column(nullable=false)
-	private String lname;
+	private String lastName;
 	
 	@Column(nullable=false, unique=true)
 	private String mail;
@@ -34,20 +34,20 @@ public class User {
 		this.id = id;
 	}
 
-	public String getFname() {
-		return fname;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setFname(String fname) {
-		this.fname = fname;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
-	public String getLname() {
-		return lname;
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void setLname(String lname) {
-		this.lname = lname;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 	public String getMail() {
@@ -65,7 +65,5 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-	
 	
 }

@@ -2,6 +2,7 @@ package com.bookStore.store;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -24,9 +25,9 @@ public class UserRepositoryTests {
 	@Test
 	public void testCreateUser() {
 		User user = new User();
-		user.setFname("testUser");
-		user.setLname("userTest");
-		user.setMail("testUser.userTest@mTest.User.com");
+		user.setFirstName("testUser");
+		user.setLastName("userTest");
+		user.setMail("test.test@test.com");
 		user.setPassword("Test2021_2020");
 		
 		User savedUser = repo.save(user);
@@ -35,5 +36,11 @@ public class UserRepositoryTests {
 		assertThat(existUser.getMail()).isEqualTo(user.getMail());
 		
 	}
-	
+	@Test
+	public void testFindUserByEmail() {
+		String email = "test.test@test.com";
+		
+		User user = repo.findByEmail(email);
+		assertThat(user).isNotNull();
+	}
 }

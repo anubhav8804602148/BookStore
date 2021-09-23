@@ -32,9 +32,24 @@ body{
 }
 #loginForm{
 	margin-left:35%;
-	margin-top:20%;
+	margin-top:16%;
 	padding:20px;
 	width:fit-content;
 	border-style:solid;
 	border-radius:30px;
+}
+#registerForm{
+	margin-left:35%;
+	margin-top:8%;
+	padding:20px;
+	width:fit-content;
+	border-style:solid;
+	border-radius:30px;
+}
+#submitRegisterForm{
+	padding-left:30%;
+}
+#registerSuccessMessage{
+	color:blue;
+	margin-left:40%;
 }
