@@ -42,11 +42,16 @@ public class AppController {
 		repo.save(user);
 		return "registerSuccess";
 	}
-	
+
 	@GetMapping("/list_users")
 	public String viewUserList(Model model) {
 		List<User> listUsers = repo.findAll();
 		model.addAttribute("listUsers", listUsers);
 		return "users";
+	}
+	
+	@GetMapping("/error")
+	public String viewErrorPage() {
+		return "errro";
 	}
 }

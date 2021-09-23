@@ -59,5 +59,8 @@ public class CustomUserDetails implements UserDetails{
 	public void setUser(User user) {
 		this.user = user;
 	}
+	public String getFullName() {
+		return user.getFirstName()+" "+user.getLastName();
+	}
 
 }

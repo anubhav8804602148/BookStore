@@ -30,39 +30,15 @@
 			    <li class="nav-item">
 			      <a class="nav-link" th:href="@{/list_users}">users</a>
 			    </li>
-			    <li>			    				
-			    	<form th:action="@{/logout}" method="post" style="margin-left:55vw;">
-			    		<p style="color:white;">Welcome <b>[[${#request.userPrincipal.principal.fullName}]]</b></p>
-			    		<input type="submit" value="sign out" />
-			    	</form>
-			    </li>
 			  </ul>
 			</nav>
-			<div>
-				<h1>List of all users</h1>	
-			</div>
-			<div>
-				<table class="table table-striped table-bordered">
-					<thead>
-						<tr>
-							<th>User Id</th>
-							<th>Email</th>
-							<th>First Name</th>
-							<th>Last Name</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr th:each="user : ${listUsers}">
-							<td th:text="${user.id}"></td>
-							<td th:text="${user.mail}"></td>
-							<td th:text="${user.firstName}"></td>
-							<td th:text="${user.lastName}"></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
 		</div>
-	
-	
+		<div>
+			<Error>
+				Seems like there is an error!! Either we don't have what you are looking for, 
+				or one or more of our services is down. 
+				Please try after some time.
+			</Error>
+		</div>
 </body>
 </html>
