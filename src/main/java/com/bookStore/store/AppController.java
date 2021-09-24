@@ -14,6 +14,9 @@ public class AppController {
 
 	@Autowired
 	private UserRepository repo;
+	
+	@Autowired
+	private BookRepository bookRepo;
 
 	@GetMapping("index")
 	public String viewHomePage() {
@@ -49,9 +52,16 @@ public class AppController {
 		model.addAttribute("listUsers", listUsers);
 		return "users";
 	}
+
+	@GetMapping("/list_books")
+	public String vieBookList(Model model) {
+		List<Book> listBooks = bookRepo.findAll();
+		model.addAttribute("listBooks", listBooks);
+		return "books";
+	}
 	
 	@GetMapping("/error")
 	public String viewErrorPage() {
-		return "errro";
+		return "error";
 	}
 }
