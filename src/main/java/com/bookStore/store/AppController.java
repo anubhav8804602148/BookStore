@@ -64,4 +64,16 @@ public class AppController {
 	public String viewErrorPage() {
 		return "error";
 	}
+	
+	@GetMapping("/register_books")
+	public String viewRegisterBookPage(Model model) {
+		model.addAttribute("book", new Book());
+		return "registerBook";
+	}
+	@PostMapping("/process_register_book")
+	public String processBookRegistration(Book book) {
+		bookRepo.save(book);
+		return "bookRegisterSuccess";
+	}
+
 }

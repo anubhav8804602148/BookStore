@@ -33,11 +33,8 @@
 			    <li class="nav-item">
 			      <a class="nav-link" th:href="@{/books}">downloads</a>
 			    </li>
-			    <li>			    				
-			    	<form th:action="@{/logout}" method="post" style="margin-left:55vw;">
-			    		<p style="color:white;">Welcome <b>[[${#request.userPrincipal.principal.fullName}]]</b></p>
-			    		<input type="submit" value="sign out" />
-			    	</form>
+			    <li class="nav-item">
+			      <a class="nav-link" th:href="@{/register_books}">upload</a>
 			    </li>
 			  </ul>
 			</nav>
