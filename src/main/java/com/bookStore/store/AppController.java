@@ -53,7 +53,7 @@ public class AppController {
 		return "users";
 	}
 
-	@GetMapping("/list_books")
+	@GetMapping("/books")
 	public String vieBookList(Model model) {
 		List<Book> listBooks = bookRepo.findAll();
 		model.addAttribute("listBooks", listBooks);

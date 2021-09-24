@@ -57,3 +57,7 @@ Error{
 	margin-left:10vw;
 	color:white;
 }
+#searchBar{
+	float:right;
+	border:1px solid #ccc;	
+}

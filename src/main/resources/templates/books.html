@@ -31,7 +31,7 @@
 			      <a class="nav-link" th:href="@{/list_users}">users</a>
 			    </li>
 			    <li class="nav-item">
-			      <a class="nav-link" th:href="@{/list_books}">downloads</a>
+			      <a class="nav-link" th:href="@{/books}">downloads</a>
 			    </li>
 			    <li>			    				
 			    	<form th:action="@{/logout}" method="post" style="margin-left:55vw;">
@@ -45,7 +45,11 @@
 				<h1>List of all Books available for download</h1>	
 			</div>
 			<div>
-				<table class="table table-striped table-bordered">
+				<div>
+					<input class="col-11" type="text" id="searchBar" placeholder="search for your favourite book. . ."/>
+					<button class="col-1" onClick="filterSearch()">Search</button>
+				</div>
+				<table id="bookTable" class="table table-striped table-bordered">
 					<thead>
 						<tr>
 							<th>Title</th>
@@ -56,7 +60,7 @@
 					</thead>
 					<tbody>
 						<tr th:each="book : ${listBooks}">
-							<td th:text="${book.id}"></td>
+							<td th:text="${book.title}"></td>
 							<td th:text="${book.author}"></td>
 							<td th:text="${book.publishDate}"></td>
 							<td><a th:href="${book.downloadLink}" th:text="${book.downloadLink}"></a></td>
