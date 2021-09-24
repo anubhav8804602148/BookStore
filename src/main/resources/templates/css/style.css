@@ -4,17 +4,22 @@
 #iconImg{
 	width:3vw;
 }
-#varBigImage{
+.varBigImage{
 	float:left;
 	margin:4vw;
-	width:40vw;
+	width:20vw;
 	border-style:inset;
 }
+
 #notices{
+	margin:100px;
 	float:right;
 	border-style:double;
 	border-color:blueviolet;
 	margin-top:10%;
+	margin-right:10%;
+	width:40vw;
+	font-family: "Lucida Console", "Courier New", monospace;
 }
 body{
 	background-color:cadetblue;
@@ -60,4 +65,17 @@ Error{
 #searchBar{
 	float:right;
 	border:1px solid #ccc;	
+}
+.footerIcon{
+	margin-left:30px;
+	width:20px;
+}
+#pageFooter{
+	position:absolute;
+	bottom:0;
+	color:white;
+	padding-left:100px;
+	background-color:#737985;
+	font-size:15px;
+	width:100vw;
 }
