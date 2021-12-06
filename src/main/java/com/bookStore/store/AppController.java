@@ -3,6 +3,8 @@ package com.bookStore.store;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,6 +14,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class AppController {
 
+	Authentication auth;
+	
 	@Autowired
 	private UserRepository repo;
 	
@@ -46,8 +50,17 @@ public class AppController {
 		return "registerSuccess";
 	}
 
+	@GetMapping("/notAuthorized")
+	public String showNotAuthorizedPage() {
+		return "notAuthorized";
+	}
+	
 	@GetMapping("/list_users")
 	public String viewUserList(Model model) {
+		auth = SecurityContextHolder.getContext().getAuthentication();
+		if(repo.findByEmail(auth.getName()).getRole().equals("USER")){
+			return "notAuthorized";
+		}
 		List<User> listUsers = repo.findAll();
 		model.addAttribute("listUsers", listUsers);
 		return "users";

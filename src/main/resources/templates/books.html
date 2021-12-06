@@ -11,69 +11,66 @@
 		<title>All Books List | Book Store</title>
 	</head>
 <body>
-
-		<div>
-			<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-			  <ul class="navbar-nav">
-			    <li class="nav-item">
-			      <a class="nav-link" th:href="@{/index}"><img src="images/abs-icon.png" id="iconImg"/></a>
-			    </li>
-			    <li class="nav-item">
-			      <a class="nav-link" th:href="@{/index}">home</a>
-			    </li>
-			    <li class="nav-item">
-			      <a class="nav-link" th:href="@{/login}">login</a>
-			    </li>
-			    <li class="nav-item">
-			      <a class="nav-link" th:href="@{/register}">register</a>
-			    </li>
-			    <li class="nav-item">
-			      <a class="nav-link" th:href="@{/list_users}">users</a>
-			    </li>
-			    <li class="nav-item">
-			      <a class="nav-link" th:href="@{/books}">downloads</a>
-			    </li>
-			    <li class="nav-item">
-			      <a class="nav-link" th:href="@{/register_books}">upload</a>
-			    </li>
-			  </ul>
-			</nav>
-			<div>
-				<h1>List of all Books available for download</h1>	
-			</div>
-			<div>
-				<div>
-					<input class="col-11" type="text" id="searchBar" placeholder="search for your favourite book. . ."/>
-					<button class="col-1" onClick="filterSearch()">Search</button>
-				</div>
-				<table id="bookTable" class="table table-striped table-bordered">
-					<thead>
-						<tr>
-							<th>Title</th>
-							<th>Author</th>
-							<th>Published Date</th>
-							<th>Download Link</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr th:each="book : ${listBooks}">
-							<td th:text="${book.title}"></td>
-							<td th:text="${book.author}"></td>
-							<td th:text="${book.publishDate}"></td>
-							<td><a th:href="${book.downloadLink}" th:text="${book.downloadLink}"></a></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	
-		<footer id="pageFooter">
-				<img class="footerIcon" src="/images/mail.png"><label>anubhav8804602148@gmail.com</label>
-				<img class="footerIcon" src="/images/call.png"><label>+91 7543028853</label>
-				<img class="footerIcon" src="/images/facebook.png"><label><a href="https://www.facebook.com/profile.php?id=100049327507243">Anubhav Sharma</a></label>
-				<img class="footerIcon" src="/images/linkedin.png"><label><a href="https://www.linkedin.com/in/anubhav-sharma-4b1a13169/">Anubhav Sharma</a></label>
-		</footer>
+	<div>
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">		
+		  <ul class="navbar-nav">
+		    <li class="nav-item">
+		      <a class="nav-link" th:href="@{/index}"><img src="images/abs-icon.png" id="iconImg"/></a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link" th:href="@{/index}">home</a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link" th:href="@{/login}">login</a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link" th:href="@{/register}">register</a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link" th:href="@{/list_users}">users</a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link" th:href="@{/books}">downloads</a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link" th:href="@{/register_books}">upload</a>
+		    </li>
+		  </ul>
 		
-	
+		</nav>
+	</div>
+	<div>
+		<h1>List of all Books available for download</h1>	
+	</div>
+	<div>
+		<div>
+			<input class="col-11" type="text" id="searchBar" placeholder="search for your favourite book. . ."/>
+			<button class="col-1" onClick="filterSearch()">Search</button>
+		</div>
+		<table id="bookTable" class="table table-striped table-bordered">
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Author</th>
+					<th>Published Date</th>
+					<th>Download Link</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="book : ${listBooks}">
+					<td th:text="${book.title}"></td>
+					<td th:text="${book.author}"></td>
+					<td th:text="${book.publishDate}"></td>
+					<td><a th:href="${book.downloadLink}" th:text="${book.downloadLink}"></a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div id="defaultFooter"></div>
 </body>
+
+<script>
+	$("#defaultHeader").load("defaultHeader.html");
+	$("#defaultFooter").load("defaultFooter.html");
+</script>
 </html>

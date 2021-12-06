@@ -22,9 +22,12 @@ public class User {
 	
 	@Column(nullable=false, unique=true)
 	private String mail;
-	
+
 	@Column(nullable=false)
 	private String password;
+	
+	@Column(nullable=false)
+	private String role = "USER";
 
 	public long getId() {
 		return id;
@@ -64,6 +67,14 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
 	}
 	
 }

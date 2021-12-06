@@ -8,7 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.css" />
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<script src="/webjars/jquery/jquery.js" type="text/javascript"></script>
-		<title>Register Success | Book Store</title>
+		<title>Unauthorized | Book Store</title>
 	</head>
 <body>
 	<div>
@@ -40,14 +40,11 @@
 		</nav>
 	</div>
 	<div>
-		<h1><label id="registerSuccessMessage">!!Thanks for your generosity!! Your book uploaded.</label></h1>
+		<h1><label id="notAuthorizedMessage">
+			<font color="RED">!!You are not authorized to view this content!! To gain IT access please send mail on below id!!
+			</font>
+		</label></h1>
 	</div>
 	<div id="defaultFooter"></div>
-	
 </body>
-
-<script>
-	$("#defaultHeader").load("defaultHeader.html");
-	$("#defaultFooter").load("defaultFooter.html");
-</script>
 </html>

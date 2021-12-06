@@ -13,7 +13,7 @@
 	
 	<body>
 		<div>
-			<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+			<nav class="navbar navbar-expand-sm bg-dark navbar-dark">		
 			  <ul class="navbar-nav">
 			    <li class="nav-item">
 			      <a class="nav-link" th:href="@{/index}"><img src="images/abs-icon.png" id="iconImg"/></a>
@@ -149,16 +149,11 @@
 				</tr>
 			</table>
 		</div>
-		<footer class="footer" id="pageFooter">
-				<img class="footerIcon" src="/images/mail.png"><label>anubhav8804602148@gmail.com</label>
-				<img class="footerIcon" src="/images/call.png"><label>+91 7543028853</label>
-				<img class="footerIcon" src="/images/facebook.png"><label><a href="https://www.facebook.com/profile.php?id=100049327507243">Anubhav Sharma</a></label>
-				<img class="footerIcon" src="/images/linkedin.png"><label><a href="https://www.linkedin.com/in/anubhav-sharma-4b1a13169/">Anubhav Sharma</a></label>
-		</footer>
-		
+		<div id="defaultFooter"></div>
 	</body>
 	<script>
-
+	$("#defaultHeader").load("defaultHeader.html");
+	$("#defaultFooter").load("defaultFooter.html");
 	var index=0;
 	imageView();
 	function imageView(){	
@@ -168,7 +163,6 @@
 		for(var i=0;i<tr.length;i++){
 			tr[i].style.display="none";
 		}
-		console.log(index+" "+tr.length);
 		if(index==tr.length) index=0;
 		tr[index].style.display="block";
 		index++;

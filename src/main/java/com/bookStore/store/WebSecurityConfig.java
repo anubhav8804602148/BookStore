@@ -1,7 +1,6 @@
 package com.bookStore.store;
 
-import javax.sql.DataSource;
-
+import javax.sql.DataSource; 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,9 +16,6 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
-	
-	@Autowired
-	private DataSource dataSource;
 	
 	@Bean
 	public UserDetailsService userDetailsService() {
@@ -58,7 +54,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			.and()
 			.formLogin()
 				.usernameParameter("mail")
-				.defaultSuccessUrl("/list_users")
+				.defaultSuccessUrl("/books")
 				.permitAll()
 			.and()
 			.logout().logoutSuccessUrl("/").permitAll();
