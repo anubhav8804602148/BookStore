@@ -1,5 +1,6 @@
 package com.bookStore.store;
 
+import java.io.File;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -86,6 +87,18 @@ public class AppController {
 	@PostMapping("/process_register_book")
 	public String processBookRegistration(Book book) {
 		bookRepo.save(book);
+		return "bookRegisterSuccess";
+	}
+	
+	@GetMapping("/bulk_upload")
+	public String viewBulkUploadPage(Model model) {
+		model.addAttribute("uploadFile", new UploadFile());
+		return "bulkUpload";
+	}
+	
+	@PostMapping("/process_bulk_upload")
+	public String processBulkFile(UploadFile uploadFile) {
+		System.out.println(uploadFile.file.getTotalSpace());
 		return "bookRegisterSuccess";
 	}
 

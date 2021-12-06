@@ -27,7 +27,7 @@ public class BookRepositoryTest {
 	@Test
 	public void testCreateBook() {
 		Book book = new Book();
-		book.setAuthor("Mr. Test");
+		book.setAuthor("Mr Test");
 		book.setTitle("test o test");
 		book.setPublishDate(Date.valueOf("2021-09-23"));
 		book.setDownloadLink("https://www.googl.co.in/");
@@ -36,7 +36,6 @@ public class BookRepositoryTest {
 		Book availableBook = entityManager.find(Book.class, savedBook.getId());
 		assertThat(savedBook.getAuthor()).isEqualTo(availableBook.getAuthor());
 		assertThat(savedBook.getTitle()).isEqualTo(availableBook.getTitle());
-		assertThat(2).isEqualTo(2);
 	}
 	
 }
