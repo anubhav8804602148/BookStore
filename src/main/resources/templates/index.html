@@ -42,97 +42,7 @@
 		</div>
 		<div id="img_notice_container">
 			<table id="imageTable" class="oneBigImage">
-				<tr><td><img src="/images/novelImages/chamberOfSecrets.jpeg" class="varBigImage" /> </td>
-					<td rowspan="5">
-						<section id="notices">
-							<header>From Author : Anubhav Sharma</header>
-							<p>Hi everyone, </p>
-							<p>Thank you if you chose to visit my page. I have nothing to write for a blog, so I chose to build this site. 
-								The sole purpose of this page is for learning. I am trying to implement everything I have learnt about
-								spring boot framework here. 
-								But still, I have a topic, a book store. Not to buy, but to download. Go ahead and download a book of your 
-								choice. Feel free to contribute as well in upload section.<br>
-								In case of any queries on components used, please contact me as per below mentioned addresses. 
-							 </p>
-						</section>
-					</td>
-				</tr>
-				<tr><td><img src="/images/novelImages/deathlyHallows.jpeg" class="varBigImage" /> </td>
-					<td rowspan="5">
-						<section id="notices">
-							<header>From Author : Anubhav Sharma</header>
-							<p>Hi everyone, </p>
-							<p>Thank you if you chose to visit my page. I have nothing to write for a blog, so I chose to build this site. 
-								The sole purpose of this page is for learning. I am trying to implement everything I have learnt about
-								spring boot framework here. 
-								But still, I have a topic, a book store. Not to buy, but to download. Go ahead and download a book of your 
-								choice. Feel free to contribute as well in upload section.<br>
-								In case of any queries on components used, please contact me as per below mentioned addresses. 
-							 </p>
-						</section>
-					</td>
-				</tr>
-				<tr><td><img src="/images/novelImages/gobletOfFire.jpeg" class="varBigImage" /> </td>
-					<td rowspan="5">
-						<section id="notices">
-							<header>From Author : Anubhav Sharma</header>
-							<p>Hi everyone, </p>
-							<p>Thank you if you chose to visit my page. I have nothing to write for a blog, so I chose to build this site. 
-								The sole purpose of this page is for learning. I am trying to implement everything I have learnt about
-								spring boot framework here. 
-								But still, I have a topic, a book store. Not to buy, but to download. Go ahead and download a book of your 
-								choice. Feel free to contribute as well in upload section.<br>
-								In case of any queries on components used, please contact me as per below mentioned addresses. 
-							 </p>
-						</section>
-					</td>
-				</tr>
-				<tr><td><img src="/images/novelImages/halfBloodPrince.jpeg" class="varBigImage" /> </td>
-					<td rowspan="5">
-						<section id="notices">
-							<header>From Author : Anubhav Sharma</header>
-							<p>Hi everyone, </p>
-							<p>Thank you if you chose to visit my page. I have nothing to write for a blog, so I chose to build this site. 
-								The sole purpose of this page is for learning. I am trying to implement everything I have learnt about
-								spring boot framework here. 
-								But still, I have a topic, a book store. Not to buy, but to download. Go ahead and download a book of your 
-								choice. Feel free to contribute as well in upload section.<br>
-								In case of any queries on components used, please contact me as per below mentioned addresses. 
-							 </p>
-						</section>
-					</td>
-				</tr>
-				<tr><td><img src="/images/novelImages/orderOfPhoenix.jpeg" class="varBigImage" /> </td>
-					<td rowspan="5">
-						<section id="notices">
-							<header>From Author : Anubhav Sharma</header>
-							<p>Hi everyone, </p>
-							<p>Thank you if you chose to visit my page. I have nothing to write for a blog, so I chose to build this site. 
-								The sole purpose of this page is for learning. I am trying to implement everything I have learnt about
-								spring boot framework here. 
-								But still, I have a topic, a book store. Not to buy, but to download. Go ahead and download a book of your 
-								choice. Feel free to contribute as well in upload section.<br>
-								In case of any queries on components used, please contact me as per below mentioned addresses. 
-							 </p>
-						</section>
-					</td>
-				</tr>
-				<tr><td><img src="/images/novelImages/philosophersStone.jpeg" class="varBigImage" /> </td>
-					<td rowspan="5">
-						<section id="notices">
-							<header>From Author : Anubhav Sharma</header>
-							<p>Hi everyone, </p>
-							<p>Thank you if you chose to visit my page. I have nothing to write for a blog, so I chose to build this site. 
-								The sole purpose of this page is for learning. I am trying to implement everything I have learnt about
-								spring boot framework here. 
-								But still, I have a topic, a book store. Not to buy, but to download. Go ahead and download a book of your 
-								choice. Feel free to contribute as well in upload section.<br>
-								In case of any queries on components used, please contact me as per below mentioned addresses. 
-							 </p>
-						</section>
-					</td>
-				</tr>
-				<tr><td><img src="/images/novelImages/prisonerOfAzkaban.jpeg" class="varBigImage" /> </td>
+				<tr><td><img id="bigImg" src="/images/novelImages/1.jpeg" class="varBigImage" /> </td>
 					<td rowspan="5">
 						<section id="notices">
 							<header>From Author : Anubhav Sharma</header>
@@ -158,24 +68,9 @@
 		
 	</body>
 	<script>
-	$("#defaultHeader").load("defaultHeader.html");
-	$("#defaultFooter").load("defaultFooter.html");
-	var index=0;
-	imageView();
-	function imageView(){	
-		var imgValue;
-		var imageTable = document.getElementById("imageTable");
-		tr = imageTable.getElementsByTagName("tr");
-		for(var i=0;i<tr.length;i++){
-			tr[i].style.display="none";
-		}
-		if(index==tr.length) index=0;
-		tr[index].style.display="block";
-		index++;
-		
-	  	setTimeout(imageView, 3000); // Change image every 2 seconds
-	}
-
 	
+	setInterval(function(){
+		document.getElementById("bigImg").src = "/images/novelImages/"+(1+Math.floor(Math.random() * 6))+".jpeg";
+	},3000);
 	</script>
 </html>

@@ -84,11 +84,16 @@ Error{
 	width:20px;
 }
 #pageFooter{
-	position:absolute;
-	bottom:0;
+	position:relative;
+	float:bottom;
 	color:white;
 	padding-left:100px;
 	background-color:#737985;
 	font-size:15px;
 	width:100vw;
+}
+#img_notice_container.scroll{
+	overflow-x:hidden;
+	overflow-y:auto;
+	height:80%;
 }

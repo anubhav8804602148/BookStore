@@ -1,3 +1,8 @@
+var myApp = angular.module("myApp",[]);
+myApp.controller("myCtrl",function($scope){
+	
+});
+
 function filterSearch() {
   var input, filter, table, tr, td1, td2, i, txtValue1, txtValue2, txtValue;
   input = document.getElementById("searchBar");
