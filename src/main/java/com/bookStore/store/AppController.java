@@ -59,7 +59,7 @@ public class AppController {
 	@GetMapping("/list_users")
 	public String viewUserList(Model model) {
 		auth = SecurityContextHolder.getContext().getAuthentication();
-		if(repo.findByEmail(auth.getName()).getRole().equals("USER")){
+		if(!repo.findByEmail(auth.getName()).getRole().equals("ADMIN")){
 			return "notAuthorized";
 		}
 		List<User> listUsers = repo.findAll();
@@ -100,6 +100,11 @@ public class AppController {
 	public String processBulkFile(UploadFile uploadFile) {
 		System.out.println(uploadFile.file.getTotalSpace());
 		return "bookRegisterSuccess";
+	}
+	
+	@GetMapping("/payment")
+	public String makePayment() {
+		return "payment";
 	}
 
 }

@@ -1,0 +1,108 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.example:BookStore >------------------------
+[INFO] Building BookStore 0.0.1
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot-maven-plugin:2.5.4:run (default-cli) > test-compile @ BookStore >>>
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ BookStore ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] Copying 28 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ BookStore ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 12 source files to D:\my_projects\BookStore\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ BookStore ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory D:\my_projects\BookStore\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ BookStore ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 3 source files to D:\my_projects\BookStore\target\test-classes
+[INFO] 
+[INFO] <<< spring-boot-maven-plugin:2.5.4:run (default-cli) < test-compile @ BookStore <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.5.4:run (default-cli) @ BookStore ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.5.4)
+
+2021-12-07 10:01:16.223  INFO 27368 --- [  restartedMain] c.bookStore.store.BookStoreApplication   : Starting BookStoreApplication using Java 16.0.2 on Anubhav with PID 27368 (D:\my_projects\BookStore\target\classes started by Anubhav in D:\my_projects\BookStore)
+2021-12-07 10:01:16.223  INFO 27368 --- [  restartedMain] c.bookStore.store.BookStoreApplication   : No active profile set, falling back to default profiles: default
+2021-12-07 10:01:16.267  INFO 27368 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-07 10:01:16.267  INFO 27368 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-07 10:01:17.072  INFO 27368 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-07 10:01:17.167  INFO 27368 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 2 JPA repository interfaces.
+2021-12-07 10:01:18.276  INFO 27368 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 443 (https)
+2021-12-07 10:01:18.284  INFO 27368 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-07 10:01:18.284  INFO 27368 --- [  restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-12-07 10:01:18.397  INFO 27368 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-07 10:01:18.397  INFO 27368 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2130 ms
+2021-12-07 10:01:18.696  INFO 27368 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-12-07 10:01:19.103  INFO 27368 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-12-07 10:01:19.194  INFO 27368 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-07 10:01:19.278  INFO 27368 --- [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-12-07 10:01:19.540  INFO 27368 --- [  restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-07 10:01:19.711  INFO 27368 --- [  restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-12-07 10:01:20.546  INFO 27368 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-07 10:01:20.562  INFO 27368 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-07 10:01:21.089  WARN 27368 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-07 10:01:21.335  INFO 27368 --- [  restartedMain] o.s.s.w.a.c.ChannelProcessingFilter      : Validated configuration attributes
+2021-12-07 10:01:21.351  INFO 27368 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.access.channel.ChannelProcessingFilter@33e074b3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@56284af6, org.springframework.security.web.context.SecurityContextPersistenceFilter@7c8ac343, org.springframework.security.web.header.HeaderWriterFilter@2f7fdcaa, org.springframework.security.web.csrf.CsrfFilter@89248c5, org.springframework.security.web.authentication.logout.LogoutFilter@6d9cf43f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4af674e5, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@474a7209, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@955ff69, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@74c9de4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3f73aca3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4ce92753, org.springframework.security.web.session.SessionManagementFilter@5aaae276, org.springframework.security.web.access.ExceptionTranslationFilter@5e216437, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@37d35d2f]
+2021-12-07 10:01:21.550  INFO 27368 --- [  restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2021-12-07 10:01:21.982  INFO 27368 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-07 10:01:22.380  INFO 27368 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 443 (https) with context path ''
+2021-12-07 10:01:22.396  INFO 27368 --- [  restartedMain] c.bookStore.store.BookStoreApplication   : Started BookStoreApplication in 6.59 seconds (JVM running for 7.139)
+2021-12-07 10:09:48.166  INFO 27368 --- [-nio-443-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-07 10:09:48.166  INFO 27368 --- [-nio-443-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-07 10:09:48.166  INFO 27368 --- [-nio-443-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+
+
+2021-12-07 11:07:51.042  INFO 27368 --- [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-07 11:07:51.048  INFO 27368 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-12-07 11:07:51.052  INFO 27368 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.5.4)
+
+2021-12-07 11:07:51.128  INFO 27368 --- [  restartedMain] c.bookStore.store.BookStoreApplication   : Starting BookStoreApplication using Java 16.0.2 on Anubhav with PID 27368 (D:\my_projects\BookStore\target\classes started by Anubhav in D:\my_projects\BookStore)
+2021-12-07 11:07:51.128  INFO 27368 --- [  restartedMain] c.bookStore.store.BookStoreApplication   : No active profile set, falling back to default profiles: default
+2021-12-07 11:07:51.220  INFO 27368 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-07 11:07:51.226  INFO 27368 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 2 JPA repository interfaces.
+2021-12-07 11:07:51.288  INFO 27368 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 443 (https)
+2021-12-07 11:07:51.288  INFO 27368 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-07 11:07:51.289  INFO 27368 --- [  restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-12-07 11:07:51.302  INFO 27368 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-07 11:07:51.302  INFO 27368 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 172 ms
+2021-12-07 11:07:51.321  INFO 27368 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2021-12-07 11:07:51.336  INFO 27368 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2021-12-07 11:07:51.337  INFO 27368 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-07 11:07:51.340  INFO 27368 --- [  restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-12-07 11:07:51.356  INFO 27368 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-07 11:07:51.356  INFO 27368 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-07 11:07:51.414  WARN 27368 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-07 11:07:51.430  INFO 27368 --- [  restartedMain] o.s.s.w.a.c.ChannelProcessingFilter      : Validated configuration attributes
+2021-12-07 11:07:51.431  INFO 27368 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.access.channel.ChannelProcessingFilter@16170b17, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@8bdce4a, org.springframework.security.web.context.SecurityContextPersistenceFilter@4ffb5208, org.springframework.security.web.header.HeaderWriterFilter@36eee56b, org.springframework.security.web.csrf.CsrfFilter@5986087e, org.springframework.security.web.authentication.logout.LogoutFilter@2f3f4ceb, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@216642dd, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@524871c7, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@37f6bda0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@e5cc7be, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4f58bea3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@786240f1, org.springframework.security.web.session.SessionManagementFilter@26d77b54, org.springframework.security.web.access.ExceptionTranslationFilter@7ef7e233, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@351f588f]
+2021-12-07 11:07:51.456  INFO 27368 --- [  restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2021-12-07 11:07:51.596  INFO 27368 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-07 11:07:51.718  INFO 27368 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 443 (https) with context path ''
+2021-12-07 11:07:51.721  INFO 27368 --- [  restartedMain] c.bookStore.store.BookStoreApplication   : Started BookStoreApplication in 0.611 seconds (JVM running for 3996.457)
+2021-12-07 11:07:51.722  INFO 27368 --- [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+^C
